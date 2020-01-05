@@ -12,7 +12,7 @@ import com.slackbot.model.SlackResponse;
 @RestController
 public class SlackBotController {
 
-	@RequestMapping(value = "/slack", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	@RequestMapping(value = "/slack/slash", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public SlackResponse onReceiveSlashCommand(@RequestParam("team_id") String teamId,
 			@RequestParam("team_domain") String teamDomain, @RequestParam("channel_id") String channelId,
 			@RequestParam("channel_name") String channelName, @RequestParam("user_id") String userId,
