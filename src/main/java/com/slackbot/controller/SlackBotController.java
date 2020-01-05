@@ -19,12 +19,12 @@ public class SlackBotController {
 			@RequestParam("user_name") String userName, @RequestParam("command") String command,
 			@RequestParam("text") String text, @RequestParam("response_url") String responseUrl) {
 		SlackResponse response = new SlackResponse();
-		response.setText("Slack Bot");
-		response.setResponseType("in_channel");
+        response.setText("This is the response text");
+        response.setResponseType("in_channel");
 
-		Attachment attachment = new Attachment();
-		attachment.setText("Hola Mundo");
-		attachment.setColor("#0000ff");
+        Attachment attachment = new Attachment();
+        attachment.setText("This is the attachment text");
+        attachment.setColor("#0000ff");
 
 		response.getAttachments().add(attachment);
 
